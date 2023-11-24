@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    background-color: rgb(253, 198, 48, 0.8);
+    max-height: 90vh;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 20px 80px rgb(253, 198, 48);
+}
+.container2 {
+    max-height: 100vh;
+    width: 100%;
+    margin-top: 10rem;
+}
+.inner-conatiner2 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.innerbox {
+    width: 30%;
+    height: 200px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid transparent;
+    transition: border-color 0.1s ease;
+    position: relative;
+    padding: 30px;
+    background-color: rgb(253, 198, 48, 0.8);
+    border-radius: 3px;
+}
+.innerbox:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+}
+.innerbox:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+}
+.paratext {
+    font-size: 0.9rem;
+}
+.innerbox p {
+    margin: 0;
+}
+.upper {
+    display: flex;
+}
+
+header {
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgb(253, 198, 48, 0), rgb(253, 198, 48, 0.8));
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0% 0, 100% 0, 100% 0vh, 0% 100%);
+    position: relative;
+}
+.profile-img {
+    transform: translateY(-90%);
+    position: absolute;
+    left: 10px;
+    margin: auto;
+    display: block;
+    object-fit: fill;
+    z-index: 1;
+}
+.phone-div {
+    max-height: 230px;
+    background-color: red;
+}
+.inside-cont {
+    display: flex;
+    justify-content: space-around;
+    height: 72px;
+    align-items: center;
+}
+.btn-white {
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+}
+.nav-item {
+    padding: 10px;
+    min-width: 150px;
+    text-align: center;
+    color: black;
+}
+.nav-item:hover {
+    color: rgb(253, 198, 48, 0.8);
+    background-color: white;
+    border-radius: 8px;
+    transition: background-color 0.7s ease;
+}
+.outer-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.text-container {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.create-account {
+    display: flex;
+    color: #2E2E2E;
+    font-weight: 500;
+    line-height: 20.8px;
+    font-size: 16px;
+}
+.create-account button {
+    background: #2F6CE5;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 8px 15px;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19.5px;
+    cursor: pointer;
+}
+.its-free {
+    color: white;
+    font-weight: 700;
+}
+.perfect-head{
+    font-size: 32px;
+        line-height: 60px;
+        color: white;
+}
+.second-div{
+    display: flex;
+}
+.phone-div{
+    animation-name: moveinthebegining;
+        animation-duration: 3s;
+}
+@media only screen and (max-width: 768px) {
+    .phone-div {
+            animation: none;
+        }
+    .profile-img {
+        max-width: 300px;
+    }
+    .profile-img{
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+    }
+    .outer-container{
+display: none;}
+header{
+    background-image: none;
+}
+.perfect-head{
+    font-size: 15px;
+    color: black;
+    font-weight: 600;
+}
+.text-container{
+            top: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                    right: 0;
+}
+.second-div {
+    flex-direction: column;
+    margin-top: 9rem;
+}
+.inner-conatiner2{
+    width: 100%;
+    flex-direction: column;
+}
+.innerbox{
+    width: 100%;
+}
+}
+@media only screen and (min-width: 560px) and (max-width: 800px) {
+    .phone-div {
+            animation: none;
+        }
+    .text-container {
+    
+        
+            right: 10%;
+        }
+}
+@keyframes moveinthebegining {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        color: grey;
+        transform: translate(0);
+    }
+}
